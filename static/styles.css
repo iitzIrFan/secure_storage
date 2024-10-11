@@ -1,31 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
-
-
-html {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
-
-#html_register{ /*Add ID*/
-    background-image: url(./Login.jpeg);
-}
-
-#html_login { /*Add ID*/
-    background-image: url(./Login.jpeg);
-}
-
-#html_index{ /*Add ID*/
-    background-image: url(./Login.jpeg);
+h1, h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .container {
@@ -33,90 +17,79 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 40px;
+    max-width: 600px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-#container_register{ /*Add ID*/
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 15px;
-    box-shadow: -3px 3px rgba(255, 255, 255, 0.3);
-}
-
-#container_login{ /*Add ID*/
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 15px;
-    box-shadow: -3px 3px rgba(255, 255, 255, 0.3);
-}
-
-#container_index{ /*Add ID*/
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 15px;
-    box-shadow: -3px 3px rgba(255, 255, 255, 0.3);
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.heading {
-    margin-bottom: 20px; /* Add some space between the heading and the hyperlink */
-}
-
-.hyperlink {
-    text-align: left;
-    margin-top: 10px; /* Add some space between the heading and the hyperlink */
-}
-
-h1, h2 {
-    text-align: center;
-}
-#h1_index, #h2_index{ /*Add ID*/
-    color: black;
-}
-.form {
-    text-align: center;
+    margin-bottom: 30px;
 }
 
 .form input[type="file"] {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
 }
 
-.error {
-    color: red;
-}
-
-.btn {
+.form input[type="submit"] {
+    padding: 12px 20px;
+    background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-}
-#btn_register{ /*Add ID*/
-    background-color: rgb(93, 198, 96);
-    padding: 6px 25px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-#btn_login{ /*Add ID*/
-    background-color: rgb(93, 198, 96);
-    padding: 6px 25px;
+.form input[type="submit"]:hover {
+    background-color: #45a049;
 }
 
 .file-list {
     list-style: none;
     padding: 0;
 }
+
 .file-list li {
     margin-bottom: 10px;
 }
 
-.logout {
-    float: right;
-    margin-top: -40px;
+.file-list li a {
+    font-weight: bold;
     color: #4CAF50;
     text-decoration: none;
 }
 
-.logout:hover {
+.file-list li a:hover {
+    color: #333;
     text-decoration: underline;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logout {
+    float: right;
+    margin-top: -20px;
+    font-weight: bold;
+    color: #f44336;
+}
+
+.logout:hover {
+    color: #d32f2f;
 }
 
 input {
@@ -128,61 +101,36 @@ input {
     outline: none;
 }
 
-.title{
-    font-size: 15px;
-    text-align: center;
-    color: black;
-    user-select: none;
-    border-radius: 15px 20px 15px 20px;
-}
-
-
-
-.field input{
-    height: 50%;
-
-    outline: none;
-    font-size: 17px;
-    padding-left: 20px;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
 .field input:focus, .field input:valid {
     border-color: #4158d0;
 }
 
-.field input[type="submit"] {
-    color: #fff;
-    border: none;    
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        max-width: 100%;
+    }
 
-    font-size: 14px;
+    h1, h2 {
+        font-size: 1.5rem;
+    }
 
-    padding-bottom: 10px;
+    .form input[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+.btn {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-.field_index input[type="submit"]{ /*Change class*/ /*Check*/
-    color: #fff;
-    border: none;    
-    margin-top: -10px;
-    font-size: 12px;
-    padding-bottom: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.a_login{ /*ADD Class*/
-    font-weight: bold;  
-}
-.btn::value {
-    vertical-align: middle !important; /* Align label vertically */
-}
-
-#btn_login:hover { /*Add ID*/
-    background-color: rgb(10, 224, 17);
+.btn:hover {
+    background-color: #45a049;
 }
